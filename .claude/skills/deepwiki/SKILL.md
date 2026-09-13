@@ -44,6 +44,8 @@ documentation for public GitHub repositories, grounded in the actual code.
 ## Availability
 
 The tools require the `deepwiki` MCP server, declared in `.mcp.json` at the
-repository root (project scope — Claude Code asks for approval on first
-use). If the `mcp__deepwiki__*` tools are missing, check the MCP status
-(e.g. `/mcp`) before assuming the answer is "no information".
+repository root and pre-approved in `.claude/settings.json` (the
+`enabledMcpjsonServers` entry plus the `mcp__deepwiki__*` allow rule), so it
+connects without a first-use prompt. If the `mcp__deepwiki__*` tools are
+missing, check the MCP status (e.g. `/mcp`) before assuming the answer is
+"no information".
