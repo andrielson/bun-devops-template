@@ -1,7 +1,14 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.5.13/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.5.14/schema.json",
   "files": {
-    "includes": ["**", ".husky/**", "!**/.worktrees", "!**/bun.lock", "!**/.claude/settings.local.json"]
+    "includes": [
+      "**",
+      ".husky/**",
+      "!**/.worktrees",
+      "!**/.claude/worktrees",
+      "!**/bun.lock",
+      "!**/.claude/settings.local.json"
+    ]
   },
   "formatter": {
     "enabled": true,
