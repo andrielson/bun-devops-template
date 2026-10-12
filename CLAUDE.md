@@ -17,13 +17,19 @@ This is a GitHub template for Bun-based DevOps projects (created with `bun init`
 - `bun run typecheck` — `tsc --noEmit`
 - `bun build <entry.ts|entry.html|entry.css>` — bundle
 
-No linter or formatter is configured.
-
 ## TypeScript strictness (tsconfig.json)
 
 - `strict` and `noUncheckedIndexedAccess` are on — indexing an array/map yields `T | undefined`.
 - `verbatimModuleSyntax` is on — type-only imports must use `import type { ... }`.
 - `allowImportingTsExtensions` is on — relative imports may include the `.ts` extension.
+
+## Code style (Biome, `biome.json`)
+
+- Single quotes (JSX included), semicolons omitted (`asNeeded`), 2-space indent, 120-column lines.
+- Imports are auto-organized into blank-line-separated groups, in order: `bun:*` → `node:*` → packages → aliases → relative paths.
+- `package.json` keys are kept sorted (`useSortedPackageJson`).
+
+`bun run lint:fix` and the pre-commit lint-staged fixers correct style automatically, but matching it upfront avoids churn.
 
 ## Bun over Node.js
 
@@ -134,6 +140,8 @@ bun --hot ./index.ts
 For more information, read the Bun API docs in `node_modules/bun-types/docs/**.mdx`.
 
 ## Agent skills
+
+The workflow docs in `docs/agents/` describe skills from the `mattpocock-skills` plugin (enabled in `.claude/settings.json`), e.g. `/triage` and `/wayfinder`. Two local skills ship in `.claude/skills/`: `deepwiki` (third-party repo research; see Conventions) and `gh` (GitHub CLI invocation patterns: `--json` structured output, pagination limits, search vs. list, `gh api` fallbacks).
 
 ### Issue tracker
 
