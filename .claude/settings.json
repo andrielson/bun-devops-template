@@ -1,9 +1,10 @@
 {
-  "enabledPlugins": {
-    "mattpocock-skills@claude-plugins-official": true
-  },
-  "enabledMcpjsonServers": ["deepwiki"],
   "permissions": {
     "allow": ["mcp__deepwiki__*"]
+  },
+  "enabledMcpjsonServers": ["deepwiki"],
+  "enabledPlugins": {
+    "claude-md-management@anthropic-plugin-directory": true,
+    "mattpocock-skills@claude-plugins-official": true
   }
 }
