@@ -5,7 +5,7 @@
     "format:check": "prettier --check .",
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
-    "lint:sh": "git ls-files '*.sh' ':!:.worktrees' ':!:.claude/worktrees' | xargs --no-run-if-empty shellcheck",
+    "lint:sh": "git ls-files '*.sh' ':!:.claude/worktrees' | xargs --no-run-if-empty shellcheck",
     "prepare": "husky",
     "typecheck": "tsc --noEmit"
   },
